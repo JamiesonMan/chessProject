@@ -2,6 +2,6 @@
 
 class Move {
     public:
-    
+        
     private:
 };

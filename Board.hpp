@@ -17,7 +17,6 @@ public:
         int row = 0, col = 0;
         for (size_t i = 0; i < FEN.find(" "); ++i) {
 
-
             if (FEN[i] == 'r') {
                 board[row][col++] = new Piece(4, 16, row, col); // Black Rook
             } else if (FEN[i] == 'n') {
@@ -91,7 +90,6 @@ public:
                     } else {
                         std::cout << type << "  ";
                     }
-                    
                 }
 
                 if(squareColor){
@@ -100,13 +98,15 @@ public:
                     squareColor = true;
                 }
             }
-        if(squareColor){
-            squareColor = false;
-        } else {
-            squareColor = true;
+
+            if(squareColor){
+                squareColor = false;
+            } else {
+                squareColor = true;
+            }
+            std::cout << std::endl;
         }
-        std::cout << std::endl;
-        }
+        
         std::cout << "    ________________________" << std::endl;
         std::cout << "     a  b  c  d  e  f  g  h" << std::endl;
         
